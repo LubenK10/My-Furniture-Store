@@ -1,0 +1,52 @@
+﻿/* Contact form container */
+
+.divak {
+    display: block;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 50px; /* Add some top margin for vertical centering */
+}
+
+/* Form styles */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact-form .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+    .contact-form .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.validation-error {
+    color: #FF0000;
+}
+
+/* Map container */
+.map-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
