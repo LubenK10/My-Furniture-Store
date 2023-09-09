@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Mebeli Audi - Admin</title>
+    <link rel="stylesheet" href="~/css/Layout.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyFurnitureShop.styles.css" asp-append-version="true" />
+    <link rel="shortcut icon" type="image/png" href="/images/favicon-16x16.png" />
+</head>
+<body>
+    <partial name="UserMessages" />
+    <header class="header">
+        <div class="logo">
+            <img src="/images/favicon-32x32.png" alt=""/>
+            Mebeli Audi
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">hooooooooooooooooooooooooo</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Furniture" asp-action="All">Products</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="News" asp-action="Index">News</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Cart" asp-action="Index"><img src="/images/shopping-cart32x32.png" alt="" /></a>
+                </li>
+            </ul>
+            <partial name="_LoginPartial" />
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - MyFurnitureShop
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

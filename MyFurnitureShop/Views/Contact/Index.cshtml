@@ -1,0 +1,54 @@
+﻿@model MyFurnitureShop.Models.Contact.ContactViewModel
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @{
+        ViewBag.Title = "Contact Us";
+    }
+    <link rel="stylesheet" href="~/css/contact-us.css" />
+</head>
+
+<div class="divak">
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Имейл: <a href="mailto:mebeli_audi@abv.bg">mebeli_audi@abv.bg</a></p>
+            <p>Телефон: +359 89 356 9090</p>
+            <p>Адрес: ул. „Дунав“ 5, 2900 Център, Гоце Делчев</p>
+        </div>
+        <div class="contact-form">
+            <h2>Свържи се с нас</h2>
+            <form action="#" method="post">
+                <label for="name">Име:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Имейл:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Съобщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+                
+            </form>
+        </div>
+
+    </div>
+
+    <div class="contact-container">
+     
+        <!-- Other form code -->
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.955819303227!2d23.731318476601203!3d41.57020078463491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14abc075c967cd49%3A0xc1e2fd43b9cacec7!2z0JzQtdCx0LXQu9C4INCS0LjQtNC10L3QvtCy!5e0!3m2!1sbg!2sbg!4v1692188198162!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    width="100%"
+                    height="400"
+                    style="border: 0;"
+                    allowfullscreen=""
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+</div>

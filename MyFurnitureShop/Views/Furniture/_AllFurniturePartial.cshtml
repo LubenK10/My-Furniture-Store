@@ -1,0 +1,24 @@
+﻿@using MyFurnitureShop.Core.Models.Furniture
+@model FurnitureModel
+
+<div class="col-md-4">
+    <div class="card mb-3">
+        <img class="card-img-top" src="@Model.ImageUrl" alt="Pet Image">
+        <div class="card-body text-center">
+            <h4>@Model.Name</h4>
+            <h5><b>@Model.Type.Name</b></h5>
+            <h6>
+                Price:
+                <b>@String.Format("{0:f2}", Model.Price) BGN</b>
+            </h6>
+
+            <br />
+            <a asp-area="" asp-controller="Furniture" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-success">Details</a>
+          
+           <form asp-area="" asp-controller="Cart" asp-action="Index" asp-route-id="@Model.Id" method="post">
+                  <input class="btn btn-primary" type="submit" value="Add To Cart" />
+              </form>
+                
+        </div>
+    </div>
+</div>
