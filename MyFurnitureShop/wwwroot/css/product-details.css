@@ -1,0 +1,16 @@
+﻿.h2 {
+    margin-bottom: 45px;
+    margin-top: 45px;
+}
+
+.row > * {
+    padding-left: 70px;
+}
+
+.row {
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: #FFDEAD;
+}

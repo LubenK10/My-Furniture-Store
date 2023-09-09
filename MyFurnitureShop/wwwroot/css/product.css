@@ -1,0 +1,94 @@
+﻿/* Style for the container holding the form elements */
+.form-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Style for the form labels */
+.form-label {
+    font-weight: bold;
+}
+
+/* Style for form inputs and select */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Style for submit button */
+.btn-primary {
+    background-color: #848b93;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+    
+
+.btn-success {
+   background-color: #d7c798;
+   margin-bottom:10px;
+}
+
+    .btn-success:hover {
+        background-color: #d7c798;
+    }
+
+/* Style for the heading */
+h2.text-center {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style for the horizontal line */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Style for the container holding the furniture items */
+.row1 {
+    display: flex;
+    margin: -10px;
+}
+
+
+ h2.text-center {
+        font-size: 2.5rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .row > * {
+        padding-left: 200px;
+    }
+
+.col-md-4{
+    width:30%;
+    margin-right:40px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+/* Style for each furniture item */
+._AllFurniturePartial {
+    flex: 0 0 calc(33.333% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    ._AllFurniturePartial {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
