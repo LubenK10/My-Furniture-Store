@@ -14,8 +14,8 @@ Features
 
 Technologies Used
 
-.NET Core
-Entity Framework Core
-ASP.NET Core MVC
-HTML/CSS
-JavaScript
+* .NET Core
+* Entity Framework Core
+* ASP.NET Core MVC
+* HTML/CSS
+* JavaScript
