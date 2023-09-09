@@ -1,4 +1,5 @@
 Furniture Store .NET Core Project
+
 This is a .NET Core project for a Furniture Store application. This project is designed to showcase a simple online furniture store, allowing users to browse and purchase furniture items. It also includes user registration, login functionality, and role-based access control.
 
 Features
