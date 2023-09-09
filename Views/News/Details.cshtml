@@ -1,0 +1,28 @@
+﻿@using MyFurnitureShop.Models.News
+@model DetailsNewsArticle
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @{
+        ViewData["Title"] = "News Details";
+    }
+    <link rel="stylesheet" href="~/css/news_details.css" />
+</head>
+
+<div class="newspaper-article">
+    <div class="article-header">
+        <h1 class="article-title">@Model.Title</h1>
+        <p class="article-date">@Model.PublishDate</p>
+    </div>
+    <img class="article-image" src="@Model.ImageUrl" alt="Article Image">
+    <div class="article-content">
+        <p>
+            @Model.Description
+        </p>
+        
+    </div>
+    <div class="article-author">
+        <p>Written by <span class="author-name">@Model.Author</span></p>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+﻿@using MyFurnitureShop.Models.Furniture
+@model AllFurnitures
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @{
+        ViewBag.Title = "Products";
+    }
+    <link rel="stylesheet" href="~/css/product.css" />
+</head>
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<form method="get">
+    <div class="row">
+
+        <div class="form-group col-md-3 d-flex justify-content-between">
+            <div class="form-group">
+                <label asp-for="FurnitureType"></label>
+                <select asp-for="FurnitureType" class="form-control">
+                    <option value="">All</option>
+                    @foreach (var category in Model.FurnitureTypes)
+                    {
+                        <option value="@category">@category</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        
+
+        <div class="form-group col-md-3">
+            <label asp-for="SearchTerm"></label>
+            <input asp-for="SearchTerm" class="form-control" placeholder="...">
+        </div>
+
+        
+
+        <div class="col-md-3">
+            <div class="form-group mt-4 p-2">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@{
+    var previousPage = Model.CurrentPage - 1;
+    if (previousPage < 1)
+    {
+        previousPage = 1;
+    }
+
+    var maxPage = Math.Ceiling((double)Model.TotalFurnitureCount /
+        AllFurnitures.FurnituresPerPage);
+}
+
+@*<div class="row mb-5">
+    <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary @(Model.CurrentPage == 1 ? "disabled" : string.Empty)"
+           asp-controller="Furniture"
+           asp-action="All"
+           asp-route-currentPage="@previousPage"
+           asp-route-furnitureType="@Model.FurnitureType"
+           asp-route-colour="@Model.Colour"
+           asp-route-name="@Model.Name"
+           asp-route-searchTerm="@Model.SearchTerm"><<</a>
+    </div>
+
+    @{
+        var shouldButtonBeDisabled = Model.CurrentPage == maxPage ||
+        !Model.Furnitures.Any();
+    }
+
+    <div class="col-md-6 d-grid gap-2 d-md-flex justify-content-md-end">
+        <a class="btn btn-primary
+           @(shouldButtonBeDisabled ? "disabled" : string.Empty)"
+           asp-controller="Furniture"
+           asp-action="All"
+           asp-route-currentPage="@(Model.CurrentPage + 1)"
+           asp-route-furnitureType="@Model.FurnitureType"
+           asp-route-colour="@Model.Colour"
+           asp-route-name="@Model.Name"
+           asp-route-searchTerm="@Model.SearchTerm">>></a>
+    </div>
+</div>*@
+
+@if (!Model.Furnitures.Any())
+{
+    <h2 class="text-center">No Furnitures found by the given criteria!</h2>
+}
+
+<div class="row1">
+    @foreach (var pet in Model.Furnitures)
+    {
+        <partial name="_AllFurniturePartial" model="@pet" />
+    }
+</div>

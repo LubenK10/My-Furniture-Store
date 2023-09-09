@@ -1,0 +1,27 @@
+﻿@using MyFurnitureShop.Models.News
+@model IEnumerable<DetailsNewsArticle>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Furniture Store</title>
+    <link rel="stylesheet" href="~/css/news.css" />
+</head>
+
+<div class="container">
+    <h2 class="mb-4">Новини</h2>
+    <div class="row">
+        @foreach (var article in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@article.ImageUrl" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@article.Title</h5>
+                        <a href="@Url.Action("Details", "News", new { id = article.Id })" class="btn btn-primary">Научи повече</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
