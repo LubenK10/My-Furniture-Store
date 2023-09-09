@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Profile 1": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Admin\\source\\repos\\FurnitureShop\\FurnitureShop"
+    },
+    "Profile 2": {
+      "commandName": "Executable"
+    },
+    "Profile 3": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Admin\\source\\repos\\FurnitureShop\\FurnitureShop\\Program.cs",
+      "sqlDebugging": true,
+      "nativeDebugging": true,
+      "jsWebView2Debugging": true
+    }
+  }
+}
